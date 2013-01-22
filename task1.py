@@ -23,26 +23,30 @@ class Task1():
 
     def askName(self) :
         "метод должен запрашивать имя текущего пользователя"
+        self.askName = input ("Введите ваше имя : ")
+        return self.askName
         
     def askTermCount(self):
         "метод должен запрашивать количество слагаемых"
+        self.askTermCount = input ("Введите количество слогаемых : ")
+        return self.askTermCount
+             
         
     def askTerm(self, i: "Номер очередного слагаемого" ):
         "метод должен запрашивать очередной параметр "
+        self.askTerm = input ("Введите следующее целое слогаемое")
+        return self.askTerm
+            
         
     def main(self):
         name = self.askName()
         count = self.askTermCount()
         terms = [] #инициализируем список слагаемых
-        for i in ??? :
-            terms.??? ( askTerm( i ) )
-        #здесь выводим для пользователя сумму слагаемых
-        #можно воспользоваться встроенной функцией sum()
+        for i in range (1, int(count)) :
+            terms.append( askTerm ( i ) )
+            
+        Print ("Имя пользователя :"), name #здесь выводим для пользователя сумму слагаемых
+        Print ("Сумма слогаемых :"), sum(terms) #можно воспользоваться встроенной функцией sum()
 
 if __name__ == '__main__':
     Task1().main()
-            
-        
-        
-    
-            
