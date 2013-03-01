@@ -73,12 +73,18 @@ class Model:
         
         
     def addNote(model):
-        model.currentUser.notes.append(
-            input("Введите заметку: ") )
+        print("Введите заметку: ", end=" ")
+        model.currentUser.notes.append( list( model.readMultiLineNote() ))
                         
     def delNote(model):     # задание 1
         i = int(input("Введите заметку на удаление: ")) - 1
         del model.currentUser.notes[i]
+
+    def readMultiLineNote(model):
+        while True:
+            nextLine = input()
+            if nextLine: yield nextLine
+            else: return 
         
     def listNotes(model):
         print(model.noteSep)
