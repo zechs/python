@@ -89,14 +89,7 @@ class Model:
     def listNotes(model):
         print(model.noteSep)
         for note in model.currentUser.notes :   # задание 2
-            l = len(note)
-            s = 15  # длина строки
-            if l > s :
-                for i in range (int(l/s) + 1):
-                    print(note[i * s : (i + 1) * s])
-                print("")    # "\n" добавляет 2 строки вместо одной
-            else:
-                print(note)
+            print("\n".join(note))
             print(model.noteSep)
 
     def logOut(model):
